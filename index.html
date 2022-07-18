@@ -6,47 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="code.js" defer></script>
 </head>
 <body>
-    <table class="calculator">
-        <tr>
-            <td colspan="4"><input class="display-box" type="text" id="result" disabled/></td>
-        </tr>
-
-        <tr>
-            <td><input type="button" value="CA" id="btn" onclick="clearAll()"/></td>
-            <td><input type="button" value="C" id="btn" onclick="clearOne()"/></td>
-        </tr>
-
-    <tr>
-        <td><input type="button" value="7" onclick="addNumber(7)"/></td>
-        <td><input type="button" value="8" onclick="addNumber(8)"/></td>
-        <td><input type="button" value="9" onclick="addNumber(9)"/></td>
-        <td><input type="button" value="/" onclick="addOperator('/')"/></td>
-    </tr>
-
-    <tr>
-        <td><input type="button" value="4" onclick="addNumber(4)"/></td>
-        <td><input type="button" value="5" onclick="addNumber(5)"/></td>
-        <td><input type="button" value="6" onclick="addNumber(6)"/></td>
-        <td><input type="button" value="*" onclick="addOperator('*')"/></td>
-    </tr>   
-
-    <tr>
-        <td><input type="button" value="1" onclick="addNumber(1)"/></td>
-        <td><input type="button" value="2" onclick="addNumber(2)"/></td>
-        <td><input type="button" value="3" onclick="addNumber(3)"/></td>
-        <td><input type="button" value="-" onclick="addOperator('-')"/></td>
-    </tr>
-
-    <tr>
-        <td><input type="button" value="0" onclick="addNumber(0)"/></td>
-        <td><input type="button" value="."  onclick="addNumber('.')"/></td>
-        <td><input type="button" value="=" onclick="calculate()"/></td>
-        <td><input type="button" value="+"  onclick="addOperator('+')"/></td>
-    </tr>
-
-    </table>
-    <script src="code.js"></script>
+    <div class="d-flex flex-column justify-content-center w-100 h-100"></div>
+    <div class="calculator-grid">
+        <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+        </div>
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>÷</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals class="span-two">=</button>
+    </div>
 </body>
 </html>
